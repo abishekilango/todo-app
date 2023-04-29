@@ -372,13 +372,13 @@ async function onChecked(tabId, idx, checked) {
 }
 
 async function update(tabId, idx, item) {
-    let url = "/api/update";
+    let updateUrl = "/api/update";
     if (idx === -1) {
-        url += "Title";
+        updateUrl += "Title";
     } else {
-        url += "Item";
+        updateUrl += "Item";
     }
-    fetch(url+url, {
+    fetch(updateUrl, {
         method: "POST",
         mode: "cors",
         headers: {
