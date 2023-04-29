@@ -12,8 +12,7 @@ app.use(express.static("public"));
 const mongodb = require("mongodb");
 const ObjectID = mongodb.ObjectID;
 const MongoClient = mongodb.MongoClient;
-// mongodb cluster url here
-const url = "";
+const url = process.env.MONGODB_URL;
 
 let collection;
 
